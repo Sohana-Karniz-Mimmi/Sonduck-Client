@@ -20,15 +20,15 @@ const router = createBrowserRouter([
       },
       {
         path: "/blogsDetails/:id",
-        element: <BlogDetailsPage/>,
+        element: <BlogDetailsPage />,
         // TODO: give here single products api to fetch data
         loader: ({ params }) =>
-  fetch(`/blogData.json`)
-    .then((response) => response.json())
-    .then((data) => {
-      return data.find(blog => blog.id == params.id);
-    }),
-      }
+          fetch(`/blogData.json`)
+            .then((response) => response.json())
+            .then((data) => {
+              return data.find((blog) => blog.id == params.id);
+            }),
+      },
     ],
   },
 ]);
