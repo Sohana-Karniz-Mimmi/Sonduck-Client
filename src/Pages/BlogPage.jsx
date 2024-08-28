@@ -5,7 +5,7 @@ import Sidebar from "../Components/BlogPageComponents/Sidebar";
 
 const BlogPage = () => {
   return (
-    <div className="max-w-[1200px] mx-auto mt-24 px-4">
+    <div className="max-w-[1200px] mx-auto mt-24 mb-24 px-4">
       <Heading />
       <div className="flex justify-between gap-16 flex-col-reverse lg:flex-row">
         <ArticleList />
