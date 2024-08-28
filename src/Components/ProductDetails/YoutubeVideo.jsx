@@ -18,7 +18,7 @@ const YoutubeVideo = () => {
     return (
         <div className='flex gap-6 mt-10'>
             {/* Right site */}
-            <div className="">
+            <div className="flex-3">
 
                 <div className="relative md:w-[800px] xl:[1000px]">
                     <img src={image} alt="" className="w-full h-auto" />
@@ -41,7 +41,7 @@ const YoutubeVideo = () => {
             </div>
 
             {/* left site */}
-            <div className='md:w-[357px]'>
+            <div className='md:w-[357px] flex-1'>
                 <div className=" p-5 border rounded-[10px]" style={{ boxShadow: '0px 1px 3px 0px rgba(13, 13, 18, 0.05), 0px 1px 2px 0px rgba(13, 13, 18, 0.04)' }}>
                     <div className='flex justify-between items-center'>
                         <h2 className='text-slate-900 text-lg leading-7 font-bold font-plus'>
