@@ -19,10 +19,16 @@ const router = createBrowserRouter([
         element: <BlogPage />,
       },
       {
-        path: "/blogs/:id",
-        element: <BlogDetailsPage/>,
+        path: "/blogsDetails/:id",
+        element: <BlogDetailsPage />,
         // TODO: give here single products api to fetch data
-      }
+        loader: ({ params }) =>
+          fetch(`/blogData.json`)
+            .then((response) => response.json())
+            .then((data) => {
+              return data.find((blog) => blog.id == params.id);
+            }),
+      },
     ],
   },
 ]);
