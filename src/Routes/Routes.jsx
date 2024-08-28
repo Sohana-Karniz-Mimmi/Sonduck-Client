@@ -3,6 +3,7 @@ import MainLayout from "../Layouts/MainLayout";
 import Home from "../Pages/Home";
 import { element } from "prop-types";
 import BlogPage from "../Pages/BlogPage";
+import BlogDetailsPage from "../Pages/BlogDetailsPage";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,11 @@ const router = createBrowserRouter([
         path: "/blogs",
         element: <BlogPage />,
       },
+      {
+        path: "/blogs/:id",
+        element: <BlogDetailsPage/>,
+        // TODO: give here single products api to fetch data
+      }
     ],
   },
 ]);
