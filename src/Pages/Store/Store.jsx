@@ -1,4 +1,6 @@
 import FilteringNav from "./Filtering/FilteringNav";
+import FuturePack from "./FuturePack";
+import GetBundles from "./GetBundles";
 import Pagination from "./Pagination";
 import StoreCard from "./StoreCard";
 
@@ -11,6 +13,12 @@ const Store = () => {
       </div>
       <div>
         <Pagination />
+      </div>
+      <div>
+        <FuturePack />
+      </div>
+      <div>
+        <GetBundles />
       </div>
     </div>
   );
