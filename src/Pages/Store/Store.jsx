@@ -4,7 +4,7 @@ import StoreCard from "./StoreCard";
 
 const Store = () => {
   return (
-    <div>
+    <div className="mt-12">
       <FilteringNav />
       <div>
         <StoreCard />
