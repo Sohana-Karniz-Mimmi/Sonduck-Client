@@ -7,6 +7,7 @@ import BlogPage from "../Pages/BlogPage";
 import BlogDetailsPage from "../Pages/BlogDetailsPage";
 import SubscriptionPage from "../Pages/SubscriptionPage";
 import Store from "../Pages/Store/Store";
+import FAQs from "../Pages/FAQs";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,7 @@ const router = createBrowserRouter([
         path: "/blogs",
         element: <BlogPage />,
       },
+      
       {
         path: "/blogsDetails/:id",
         element: <BlogDetailsPage />,
@@ -39,6 +41,10 @@ const router = createBrowserRouter([
       {
         path: "/store",
         element: <Store />,
+      },
+      {
+        path: "/faqs",
+        element: <FAQs></FAQs>
       },
     ],
   },
