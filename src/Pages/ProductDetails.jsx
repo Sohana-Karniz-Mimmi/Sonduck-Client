@@ -1,6 +1,3 @@
-import Features from "../Components/ProductDetails/Features";
-import RelatedProducts from "../Components/ProductDetails/RelatedProducts";
-import VideoAndFeatures from "../Components/ProductDetails/VideoAndFeatures";
 import YoutubeVideo from "../Components/ProductDetails/YoutubeVideo";
 import Container from "../Shared/Container";
 
@@ -15,15 +12,6 @@ const ProductDetails = () => {
                 </div>
                 <div>
                     <YoutubeVideo></YoutubeVideo>
-                </div>
-                <div>
-                    <VideoAndFeatures/>
-                </div>
-                <div className="my-6">
-                    <Features/>
-                </div>
-                <div className="my-20">
-                    <RelatedProducts/>
                 </div>
             </Container>
         </div>
