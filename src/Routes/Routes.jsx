@@ -5,6 +5,7 @@ import Home from "../Pages/Home";
 import { element } from "prop-types";
 import BlogPage from "../Pages/BlogPage";
 import BlogDetailsPage from "../Pages/BlogDetailsPage";
+import SubscriptionPage from "../Pages/SubscriptionPage";
 
 const router = createBrowserRouter([
   {
@@ -13,7 +14,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home/>
+        element: <Home />,
       },
       {
         path: "/blogs",
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
             .then((data) => {
               return data.find((blog) => blog.id == params.id);
             }),
+      },
+      {
+        path: "/subscription",
+        element: <SubscriptionPage />,
       },
     ],
   },
