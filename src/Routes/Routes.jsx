@@ -6,6 +6,7 @@ import { element } from "prop-types";
 import BlogPage from "../Pages/BlogPage";
 import BlogDetailsPage from "../Pages/BlogDetailsPage";
 import SubscriptionPage from "../Pages/SubscriptionPage";
+import Store from "../Pages/Store/Store";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: "/subscription",
         element: <SubscriptionPage />,
+      },
+      {
+        path: "/store",
+        element: <Store />,
       },
     ],
   },
