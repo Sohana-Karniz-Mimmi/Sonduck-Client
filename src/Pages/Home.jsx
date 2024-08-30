@@ -5,9 +5,9 @@ const Home = () => {
   return (
     <div>
       this is home page
-      <Container>
+      {/* <Container>
         <Store />
-      </Container>
+      </Container> */}
     </div>
   );
 };
