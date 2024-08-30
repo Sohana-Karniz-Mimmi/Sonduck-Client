@@ -19,7 +19,9 @@ const Pricing = () => {
               <p>per year, billed annually</p>
             </div>
           </div>
-          <button className="btn bg-white text-primary w-full font-medium">Buy Now</button>
+          <button className="btn bg-white text-primary w-full font-medium">
+            Buy Now
+          </button>
           <p className="flex items-center gap-3 pt-8">
             {" "}
             <FaCheck className="text-primary" />
@@ -46,7 +48,9 @@ const Pricing = () => {
         {/* 2nd card  */}
 
         <div className="text-gray-900 border-gray-200 border px-8 pt-12 pb-8 space-y-4 mb-3 rounded-lg">
-          <h5 className="text-sm font-semibold text-primary tracking-widest">Monthly</h5>
+          <h5 className="text-sm font-semibold text-primary tracking-widest">
+            Monthly
+          </h5>
           <div className="flex gap-4">
             <h2 className="text-4xl font-extrabold text-primary">$180</h2>
             <div className="font-normal">
@@ -54,7 +58,9 @@ const Pricing = () => {
               <p>per year, billed annually</p>
             </div>
           </div>
-          <button className="btn bg-primary text-white w-full font-medium border-none">Buy Now</button>
+          <button className="btn bg-primary text-white w-full font-medium border-none">
+            Buy Now
+          </button>
           <p className="flex items-center gap-3 pt-8">
             {" "}
             <FaCheck className="text-primary" />
@@ -81,7 +87,7 @@ const Pricing = () => {
         {/* 3rd card  */}
 
         <div className="text-white bg-primary  px-8 pt-12 pb-8 space-y-4 mb-3 rounded-lg">
-          <h5 className="text-sm font-semibold text-white">40  Pack Bundle</h5>
+          <h5 className="text-sm font-semibold text-white">40 Pack Bundle</h5>
           <div className="flex gap-4">
             <h2 className="text-4xl font-extrabold">$675</h2>
             <div className="font-normal">
@@ -89,7 +95,9 @@ const Pricing = () => {
               <p>One-Time Payment</p>
             </div>
           </div>
-          <button className="btn bg-white text-primary w-full font-medium">Buy Now</button>
+          <button className="btn bg-white text-primary w-full font-medium">
+            Buy Now
+          </button>
           <p className="flex items-center gap-3 pt-8">
             {" "}
             <FaCheck className="text-white" />
