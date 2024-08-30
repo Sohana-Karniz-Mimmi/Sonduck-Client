@@ -1,10 +1,13 @@
-import Store from "./Store";
+import Container from "../Shared/Container";
+import Store from "./Store/Store";
 
 const Home = () => {
   return (
     <div>
       this is home page
-      <Store />
+      {/* <Container>
+        <Store />
+      </Container> */}
     </div>
   );
 };

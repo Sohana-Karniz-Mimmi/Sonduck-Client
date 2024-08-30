@@ -45,7 +45,9 @@ const Pricing = () => {
 
         {/* 2nd card  */}
         <div className="text-gray-900 border-gray-200 border px-8 pt-12 pb-8 space-y-4 mb-3 rounded-lg">
+          
           <h5 className="text-sm font-semibold text-[#FF387A] tracking-widest">Monthly</h5>
+
           <div className="flex gap-4">
             <h2 className="text-4xl font-extrabold text-[#FF387A]">$180</h2>
             <div className="font-normal">
@@ -87,6 +89,7 @@ const Pricing = () => {
               <p>One-Time Payment</p>
             </div>
           </div>
+
           <button className="btn bg-white text-[#FF387A] w-full font-medium">Buy Now</button>
           <p className="flex items-center gap-3 pt-8">
             {" "}
