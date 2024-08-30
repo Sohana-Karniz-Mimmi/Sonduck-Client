@@ -30,15 +30,15 @@ const MainLayout = () => {
         <Preloader />
       ) : (
         <div className="">
-          <div className="bg-black text-white">
-            <Navbar></Navbar>
-          </div>
-          <div className="min-h-[calc(100vh-542px)] ">
-            <Outlet></Outlet>
-          </div>
-          <div className="bg-black text-white">
-            <Footer></Footer>
-          </div>
+            <div className="bg-black text-white">
+                <Navbar></Navbar>
+            </div>
+            <div className="min-h-[calc(100vh-542px)]">
+                <Outlet></Outlet>
+            </div>
+            <div className="bg-black text-white">
+                <Footer></Footer>
+            </div>
         </div>
       )}
     </>

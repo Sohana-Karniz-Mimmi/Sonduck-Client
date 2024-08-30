@@ -43,7 +43,7 @@ const BlogDetailsPage = () => {
             {blogdata
               .slice(0, 3)
               .map(({ image, title, postDate, author, id }) => (
-                <Link to={`/blogsDetails/${id}`} className="w-full space-y-3">
+                <Link key={id} to={`/blogsDetails/${id}`} className="w-full space-y-3">
                   <img
                     className="max-h-60 h-full rounded-2xl mb-10"
                     src={image}
