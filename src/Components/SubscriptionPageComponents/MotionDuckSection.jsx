@@ -54,7 +54,7 @@ const MotionDuckSection = () => {
             </div>
 
             <dialog id="my_modal_4" className="modal">
-                <div className="modal-box w-11/12 max-w-5xl bg-transparent shadow-none h-[470px]">
+                <div className="modal-box w-11/12 max-w-5xl shadow-none h-[470px]">
                     <form method="dialog">
                         <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                     </form>
