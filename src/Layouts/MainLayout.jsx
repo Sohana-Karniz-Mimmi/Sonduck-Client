@@ -29,7 +29,7 @@ const MainLayout = () => {
       <div className="bg-black text-white">
         <Navbar></Navbar>
       </div>
-      <div className="min-h-[calc(100vh-488px)]">
+      <div className="min-h-[calc(100vh-488px)] overflow-hidden">
         <Outlet></Outlet>
       </div>
       <div className="bg-black text-white">
