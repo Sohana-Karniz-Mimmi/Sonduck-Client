@@ -19,7 +19,6 @@ const Discover = () => {
                  
                 <Swiper
                     slidesPerView={4}
-                    centeredSlides={true}
                     spaceBetween={30}
                     grabCursor={true}
                     pagination={{
