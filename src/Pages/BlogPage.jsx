@@ -13,9 +13,7 @@ const BlogPage = () => {
       </div>
       <div className="lg:hidden">
         <RecentPost />
-
       </div>
-      <h3 className="text-6xl font-bold text-red-500">this is the test purpose code </h3>
     </div>
   );
 };

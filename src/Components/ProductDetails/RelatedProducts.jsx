@@ -11,37 +11,52 @@ const RelatedProducts = () => {
                 <div>
                     <img src={image} alt="" />
                     <h2 className="text-[22px] my-3 font-semibold text-[#171717] font-inter overflow-hidden text-ellipsis">
-                    1500+ Transitions Premiere Pr..
+                        1500+ Transitions Premiere Pr..
                     </h2>
-                    <div>
+                    <div className='flex justify-between items-center'>
                         <div>
                             <span className="mr-1 text-2xl font-semibold text-primary font-inter">$48</span>
                             <span className="text-lg text-gray-700 font-inter">$80</span>
                         </div>
+                        <img
+                            className="text-sm sm:text-base md:text-lg lg:text-xl"
+                            src='https://imgbb.host/images/jpkEX.png'
+                            alt=""
+                        />
                     </div>
                 </div>
                 <div>
                     <img src={image1} alt="" />
                     <h2 className="text-[22px] my-3 font-semibold text-[#171717] font-inter overflow-hidden text-ellipsis">
-                    1500+ Transitions Premiere Pr..
+                        1500+ Transitions Premiere Pr..
                     </h2>
-                    <div>
+                    <div className='flex justify-between items-center'>
                         <div>
                             <span className="mr-1 text-2xl font-semibold text-primary font-inter">$48</span>
                             <span className="text-lg text-gray-700 font-inter">$80</span>
                         </div>
+                        <img
+                            className="text-sm sm:text-base md:text-lg lg:text-xl"
+                            src='https://imgbb.host/images/jpkEX.png'
+                            alt=""
+                        />
                     </div>
                 </div>
                 <div>
                     <img src={image2} alt="" />
                     <h2 className="text-[22px] my-3 font-semibold text-[#171717] font-inter overflow-hidden text-ellipsis">
-                    1500+ Transitions Premiere Pr..
+                        1500+ Transitions Premiere Pr..
                     </h2>
-                    <div>
+                    <div className='flex justify-between items-center'>
                         <div>
                             <span className="mr-1 text-2xl font-semibold text-primary font-inter">$48</span>
                             <span className="text-lg text-gray-700 font-inter">$80</span>
                         </div>
+                        <img
+                            className="text-sm sm:text-base md:text-lg lg:text-xl"
+                            src='https://imgbb.host/images/jpkEX.png'
+                            alt=""
+                        />
                     </div>
                 </div>
             </div>
