@@ -5,9 +5,8 @@ import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 import { Link, useLocation } from "react-router-dom";
 
 const SinglePackSlider = () => {
-  const { hash } = useLocation();
 
-  console.log(hash);
+  const { hash } = useLocation();
 
   return (
     <div className="w-[1250px] mx-auto grid grid-cols-2">
@@ -23,23 +22,23 @@ const SinglePackSlider = () => {
         <div className="flex items-center gap-3">
           <a
             href={
-              (hash === "#slide1" && "#slide4") ||
-              (hash === "#slide2" && "#slide1") ||
-              (hash === "#slide3" && "#slide2") ||
-              (hash === "#slide4" && "#slide3")
+              ((hash.toString() === "#slide1" || hash.toString() === "") && "#slide4") ||
+              (hash.toString() === "#slide2" && "#slide1") ||
+              (hash.toString() === "#slide3" && "#slide2") ||
+              (hash.toString() === "#slide4" && "#slide3")
             }
-            className="text-xl border hover:border-[#FF689A] duration-500 rounded-full p-2"
+            className="text-xl border hover:border-[#FF689A] duration-500 rounded-full p-2 cursor-pointer"
           >
             <FaArrowLeftLong />
           </a>
           <a
             href={
-              (hash === "#slide1" && "#slide2") ||
-              (hash === "#slide2" && "#slide3") ||
-              (hash === "#slide3" && "#slide4") ||
-              (hash === "#slide4" && "#slide1")
+              ((hash.toString() === "#slide1" || hash.toString() === "") && "#slide2") ||
+              (hash.toString() === "#slide2" && "#slide3") ||
+              (hash.toString() === "#slide3" && "#slide4") ||
+              (hash.toString() === "#slide4" && "#slide1")
             }
-            className="text-xl border hover:border-[#FF689A] duration-500 rounded-full p-2"
+            className="text-xl border hover:border-[#FF689A] duration-500 rounded-full p-2 cursor-pointer"
           >
             <FaArrowRightLong />
           </a>
@@ -74,6 +73,7 @@ const SinglePackSlider = () => {
         </div>
 
       </div>
+
     </div>
   );
 };
