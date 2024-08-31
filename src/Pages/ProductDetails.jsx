@@ -1,4 +1,5 @@
 import Features from "../Components/ProductDetails/Features";
+// import NavCard from "../Components/ProductDetails/NavCart";
 import RelatedProducts from "../Components/ProductDetails/RelatedProducts";
 import VideoAndFeatures from "../Components/ProductDetails/VideoAndFeatures";
 import YoutubeVideo from "../Components/ProductDetails/YoutubeVideo";
@@ -26,6 +27,7 @@ const ProductDetails = () => {
                     <RelatedProducts/>
                 </div>
             </Container>
+            {/* <NavCard/> */}
         </div>
     );
 };
