@@ -6,8 +6,7 @@ import BlogDetailsPage from "../Pages/BlogDetailsPage";
 import SubscriptionPage from "../Pages/SubscriptionPage";
 import Store from "../Pages/Store/Store";
 import FAQs from "../Pages/FAQs";
-import Payment from "../Pages/Payment";
-// import Home from "../Pages/Home/Home";
+import Home from "../Pages/Home/Home";
 
 const router = createBrowserRouter([
   {
@@ -16,8 +15,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Payment />
-        // element: <Home />
+        element: <Home />
       },
       {
         path: "/product_details",
