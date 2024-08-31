@@ -1,7 +1,7 @@
 const FuturePack = () => {
   return (
     <div className="px-4 md:px-8 lg:px-16">
-      <div className="bg-pink-500 p-6 md:p-8 lg:p-10 rounded-xl mt-12">
+      <div className="bg-pink-400 p-6 md:p-8 lg:p-10 rounded-xl mt-12">
         <div className="flex text-white font-bold space-x-4 mb-4">
           <h2 className="py-2 px-4 border-2 bg-purple-800 border-purple-400 rounded-xl">
             Pr
@@ -18,7 +18,7 @@ const FuturePack = () => {
             <p className="text-sm md:text-base lg:text-lg">
               Unlimited Packs Get Every Pack We Have + Every Future Pack!
             </p>
-            <button className="btn bg-pink-600 text-white my-2">
+            <button className="btn bg-pink-500 text-white my-2">
               Get Access
             </button>
           </div>
