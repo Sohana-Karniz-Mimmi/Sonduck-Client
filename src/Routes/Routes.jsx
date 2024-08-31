@@ -1,12 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../Layouts/MainLayout";
 // import ProductDetails from "../Pages/ProductDetails";
-import Home from "../Pages/Home";
 import BlogPage from "../Pages/BlogPage";
 import BlogDetailsPage from "../Pages/BlogDetailsPage";
 import SubscriptionPage from "../Pages/SubscriptionPage";
 import Store from "../Pages/Store/Store";
 import FAQs from "../Pages/FAQs";
+import Home from "../Pages/Home/Home";
 
 const router = createBrowserRouter([
   {
@@ -15,13 +15,13 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home/>,
+        element: <Home />,
       },
       {
         path: "/blogs",
         element: <BlogPage />,
       },
-      
+
       {
         path: "/blogsDetails/:id",
         element: <BlogDetailsPage />,
@@ -42,7 +42,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/faqs",
-        element: <FAQs></FAQs>
+        element: <FAQs></FAQs>,
       },
     ],
   },
