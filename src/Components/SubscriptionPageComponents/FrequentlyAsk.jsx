@@ -3,7 +3,7 @@ const FrequentlyAsk = () => {
     return (
         <div className="w-full bg-black py-20 px-40 flex flex-col items-center gap-5">
             
-            <h1 className="gro text-5xl text-white font-semibold">Frequently asked questions</h1>
+            <h1 className="gro text-5xl text-white font-semibold mb-16">Frequently asked questions</h1>
 
             <div className="flex gap-28 w-full mt-6 ml-40">
 
