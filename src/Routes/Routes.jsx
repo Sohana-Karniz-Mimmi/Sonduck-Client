@@ -6,7 +6,7 @@ import BlogDetailsPage from "../Pages/BlogDetailsPage";
 import SubscriptionPage from "../Pages/SubscriptionPage";
 import Store from "../Pages/Store/Store";
 import FAQs from "../Pages/FAQs";
-import Checkout from "../Pages/Checkout";
+import Payment from "../Pages/Payment";
 // import Home from "../Pages/Home/Home";
 
 const router = createBrowserRouter([
@@ -16,7 +16,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Checkout />
+        element: <Payment />
         // element: <Home />
       },
       {
