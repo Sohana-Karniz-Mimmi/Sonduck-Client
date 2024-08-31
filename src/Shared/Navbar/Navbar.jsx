@@ -1,23 +1,85 @@
-import { Link } from "react-router-dom";
+
+import { Typography } from "@material-tailwind/react";
+import { NavLink } from "react-router-dom";
+import duckImg from "../../../public/NavImages/pinkDuck.png";
 
 const Navbar = () => {
   const navLinks = (
     <>
-      <li>
-        <Link to="/">Home</Link>
-      </li>
-      <li>
-        <Link to="/store">STORE</Link>
-      </li>
-      <li>
-        <Link to="/blogs">TUTORIALS</Link>
-      </li>
-      <li>
-        <Link to="/faqs">FAQS</Link>
-      </li>
-      <li>
-        <Link to="/subscription">Subscription</Link>
-      </li>
+      <Typography className="p-1 font-normal gro">
+          <NavLink
+            to={"/"}
+            className={({ isActive, isPending }) =>
+              isPending
+                ? "pending"
+                : isActive
+                ? "font-semibold underline transition-all ease-in-out duration-300 text-[#F06292]"
+                : "hover:bg-transparent"
+            }
+          >
+            HOME
+          </NavLink>
+      </Typography>
+
+      <Typography className="p-1 font-normal gro">
+          <NavLink
+            to={"/store"}
+            className={({ isActive, isPending }) =>
+              isPending
+                ? "pending"
+                : isActive
+                ? "font-semibold underline transition-all ease-in-out duration-300 text-[#F06292]"
+                : "hover:bg-transparent"
+            }
+          >
+            STORE
+          </NavLink>
+      </Typography>
+
+      <Typography className="p-1 font-normal gro">
+          <NavLink
+            to={"/blogs"}
+            className={({ isActive, isPending }) =>
+              isPending
+                ? "pending"
+                : isActive
+                ? "font-semibold underline transition-all ease-in-out duration-300 text-[#F06292]"
+                : "hover:bg-transparent"
+            }
+          >
+            TUTORIALS
+          </NavLink>
+      </Typography>
+
+      <Typography className="p-1 font-normal gro">
+          <NavLink
+            to={"/faqs"}
+            className={({ isActive, isPending }) =>
+              isPending
+                ? "pending"
+                : isActive
+                ? "font-semibold underline transition-all ease-in-out duration-300 text-[#F06292]"
+                : "hover:bg-transparent"
+            }
+          >
+            FAQs
+          </NavLink>
+      </Typography>
+
+      {/* <Typography className="p-1 font-normal gro">
+          <NavLink
+            to={"/subscription"}
+            className={({ isActive, isPending }) =>
+              isPending
+                ? "pending"
+                : isActive
+                ? "font-semibold underline transition-all ease-in-out duration-300 text-[#F06292]"
+                : "hover:bg-transparent"
+            }
+          >
+            SUBSCRIPTION
+          </NavLink>
+      </Typography> */}
     </>
   );
   return (
@@ -48,13 +110,16 @@ const Navbar = () => {
               {navLinks}
             </ul>
           </div>
-          <a className="btn text-xl">SONDUCKFILM</a>
+          <a href="#">
+            <img className="" src={duckImg} alt="" />
+          </a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 ">{navLinks}</ul>
         </div>
-        <div className="navbar-end">
-          <a className="btn">JOIN US</a>
+        <div className="navbar-end flex items-center gap-3">
+          <a className="btn btn-outline gro text-white hover:border-white hover:bg-transparent">Log In</a>
+          <a className="btn gro">JOIN US</a>
         </div>
       </div>
     </div>
