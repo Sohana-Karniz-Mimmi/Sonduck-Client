@@ -15,7 +15,8 @@ const Discover = () => {
                 <p className="w-[577px] gro text-xl text-black">At Sonduck, our vibrant community of learners and creators is at the heart of what we do. Hear directly from those who have experienced the transformative journey of learning and creating on our platform. Explore testimonials that reflect the diverse perspectives of enthusiastic learners and accomplished creators.</p>
             </div>
 
-            <div className="w-full overflow-hidden">  
+            <div className="w-full overflow-hidden"> 
+                 
                 <Swiper
                     slidesPerView={4}
                     centeredSlides={true}
@@ -83,6 +84,7 @@ const Discover = () => {
                     </SwiperSlide>
 
                 </Swiper>
+
             </div>
 
         </div>
