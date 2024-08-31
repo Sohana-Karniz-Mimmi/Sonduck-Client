@@ -6,6 +6,10 @@ import "swiper/css/bundle";
 const GetBundles = () => {
   return (
     <div className="px-4 md:px-8 lg:px-16 mt-12">
+      <h1 className="text-3xl md:text-4xl lg:text-5xl my-2">Get Bundles</h1>
+      <p className="text-sm md:text-base lg:text-lg my-4">
+        Unlimited Packs Get Every Pack We Have + Every Future Pack!
+      </p>
       <Swiper
         modules={[Pagination]}
         className="mySwiper"
@@ -14,12 +18,6 @@ const GetBundles = () => {
       >
         <SwiperSlide>
           <div>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl my-2">
-              Get Bundles
-            </h1>
-            <p className="text-sm md:text-base lg:text-lg my-4">
-              Unlimited Packs Get Every Pack We Have + Every Future Pack!
-            </p>
             <div className="bg-blue-500 p-4 md:p-6 lg:p-8 rounded-xl text-white">
               <div className="flex flex-col md:flex-row items-center justify-between my-2">
                 <div className="flex mb-4 md:mb-0">
@@ -75,12 +73,6 @@ const GetBundles = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl my-2">
-              Get Bundles
-            </h1>
-            <p className="text-sm md:text-base lg:text-lg my-4">
-              Unlimited Packs Get Every Pack We Have + Every Future Pack!
-            </p>
             <div className="bg-red-500 p-4 md:p-6 lg:p-8 rounded-xl text-white">
               <div className="flex flex-col md:flex-row items-center justify-between my-2">
                 <div className="flex mb-4 md:mb-0">
@@ -136,12 +128,6 @@ const GetBundles = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl my-2">
-              Get Bundles
-            </h1>
-            <p className="text-sm md:text-base lg:text-lg my-4">
-              Unlimited Packs Get Every Pack We Have + Every Future Pack!
-            </p>
             <div className="bg-green-500 p-4 md:p-6 lg:p-8 rounded-xl text-white">
               <div className="flex flex-col md:flex-row items-center justify-between my-2">
                 <div className="flex mb-4 md:mb-0">

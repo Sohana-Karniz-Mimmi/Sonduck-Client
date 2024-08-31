@@ -8,7 +8,7 @@ const Card = ({ card }) => {
         </figure>
         <div className="card-body">
           <h2 className="card-title text-lg sm:text-x md:text-l lg:text-xl">
-            Name: {name}
+            {name}
           </h2>
           <div className="flex justify-between items-center">
             <p className="text-sm sm:text-base md:text-lg lg:text-xl text-pink-500">
