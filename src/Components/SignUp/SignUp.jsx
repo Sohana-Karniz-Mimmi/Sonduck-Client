@@ -16,7 +16,7 @@ const apiUrl = `https://api.imgbb.com/1/upload?key=${key}`;
 
 const SignUp = () => {
 
-  const {createUser , setProfile} = useAuth() ;
+  const {createUser , setProfile , googleLogin} = useAuth() ;
   const navigate = useNavigate() ;
   const [errorText , setErrorText] = useState('') ;
   const [passInt, setPassInt] = useState("");
@@ -86,6 +86,28 @@ const SignUp = () => {
       setErrorText("Please Accept Our Turms & Condition !");
     }
   };
+
+  const handleGoogleLogin = () => {
+    googleLogin()
+    .then( async (result) => {
+      console.log(result);  
+      toast.success('Login Success Fully !') ;
+
+      setTimeout(() => {
+        if(location.state){
+            document.getElementById('my_modal_3').close() ;
+            navigate(location.state) ;
+        }
+        else{
+            document.getElementById('my_modal_3').close() ;
+            navigate('/') ;
+        }
+      }, 1000);
+    })
+    .catch((error) => {
+      console.log(error);
+    })
+  }
 
   return (
     <div>
@@ -168,7 +190,7 @@ const SignUp = () => {
             <div className="divider text-base gro mt-7">Or Sign Up With</div>
 
             <div className="flex items-center justify-between gap-3 mt-6">
-              <Button className="w-full gro capitalize text-base bg-[#FAFAFA] border text-black shadow-none flex gap-3 items-center justify-center">
+              <Button onClick={handleGoogleLogin} className="w-full gro capitalize text-base bg-[#FAFAFA] border text-black shadow-none flex gap-3 items-center justify-center">
                 <FcGoogle className="text-xl" /> Google
               </Button>
               <Button className="w-full gro capitalize text-base bg-[#FAFAFA] border text-black shadow-none flex gap-3 items-center justify-center">
