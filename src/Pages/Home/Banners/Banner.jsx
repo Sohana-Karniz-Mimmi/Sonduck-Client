@@ -23,7 +23,8 @@ const Banner = () => {
             <span className="text-gray-500">Available</span>
           </h1>
           <p className="text-gray-600">
-            Find What you need on Sonduck Film, Discover millions of video
+            Find What you need on Sonduck Film, Discover millions of video{" "}
+            <br />
             templates, stock footage, audio & more. All for one low cost
           </p>
           <div className="flex gap-4">

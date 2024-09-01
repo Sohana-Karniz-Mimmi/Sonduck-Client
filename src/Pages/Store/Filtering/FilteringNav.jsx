@@ -6,7 +6,7 @@ const FilteringNav = () => {
           <h3 className="border-2 py-2 px-4 rounded-lg text-sm md:text-base lg:text-lg">
             Filter
           </h3>
-          <h3 className="border-2 py-2 px-4 rounded-lg text-sm md:text-base lg:text-lg">
+          <h3 className="border-2 py-2 px-4 rounded-lg text-sm md:text-base lg:text-lg border-pink-300 text-pink-400">
             All Products
           </h3>
           <h3 className="border-2 py-2 px-4 rounded-lg text-sm md:text-base lg:text-lg">
