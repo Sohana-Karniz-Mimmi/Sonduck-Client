@@ -7,9 +7,9 @@ import { IoMdEye, IoMdEyeOff } from "react-icons/io";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import useAuth from "../../Hook/useAuth";
-import { ToastContainer, toast } from "react-toastify";
 import axios from "axios";
 import 'react-toastify/dist/ReactToastify.css';
+import { toast, ToastContainer } from "react-toastify";
 
 const key = import.meta.env.VITE_IMAGE_HOISTING_API_KEY;
 const apiUrl = `https://api.imgbb.com/1/upload?key=${key}`;
@@ -92,14 +92,15 @@ const SignUp = () => {
     .then( async (result) => {
       console.log(result);  
       toast.success('Login Success Fully !') ;
+      document.getElementById('my_modal_4').close() ;
 
       setTimeout(() => {
         if(location.state){
-            document.getElementById('my_modal_3').close() ;
+            document.getElementById('my_modal_4').close() ;
             navigate(location.state) ;
         }
         else{
-            document.getElementById('my_modal_3').close() ;
+            document.getElementById('my_modal_4').close() ;
             navigate('/') ;
         }
       }, 1000);
@@ -206,18 +207,6 @@ const SignUp = () => {
           </form>
         </div>
       </dialog>
-      <ToastContainer
-        position="top-right"
-        autoClose={1000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-      />
     </div>
   );
 };
