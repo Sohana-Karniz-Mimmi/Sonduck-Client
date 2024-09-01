@@ -1,11 +1,14 @@
 
-import { Button, Typography } from "@material-tailwind/react";
+import { Avatar, Button, Menu, MenuHandler, MenuItem, MenuList, Typography } from "@material-tailwind/react";
 import { NavLink } from "react-router-dom";
 import duckImg from "../../../public/NavImages/pinkDuck.png";
 import SignUp from "../../Components/SignUp/SignUp";
 import Login from "../../Components/Login/Login";
+import useAuth from "../../Hook/useAuth";
 
 const Navbar = () => {
+
+  const {user , logOut} = useAuth() ;
 
   const navLinks = (
     <ul className="flex items-center gap-3">
@@ -125,8 +128,31 @@ const Navbar = () => {
         </div>
 
         <div className="navbar-end flex items-center gap-3">
-          <Button onClick={()=>document.getElementById('my_modal_3').showModal()} className="bg-transparent hover:bg-transparent py-[11px] hover:text-[#F06292] capitalize border-[#F06292] hover:border text-white">Log In</Button>
-          <Button onClick={()=>document.getElementById('my_modal_4').showModal()} className="gro hover:bg-[#F06292] border-[#F06292] border text-[#F06292] capitalize bg-transparent hover:text-white">Join Us</Button>
+
+          {
+            user?.email ? 
+            <div className="">
+              <Menu>
+
+                <MenuHandler>
+                  <Avatar className="cursor-pointer border" src={user?.photoURL} />
+                </MenuHandler>
+
+                <MenuList>
+                  <MenuItem onClick={() => logOut()} className="flex items-center gap-2 ">
+                    <Typography variant="small" className="font-medium">
+                      Sign Out
+                    </Typography>
+                  </MenuItem>
+                </MenuList>
+              </Menu>
+            </div>:
+            <div className="flex items-center gap-3">
+              <Button onClick={()=>document.getElementById('my_modal_3').showModal()} className="bg-transparent hover:bg-transparent py-[11px] hover:text-[#F06292] capitalize border-[#F06292] hover:border text-white">Log In</Button>
+              <Button onClick={()=>document.getElementById('my_modal_4').showModal()} className="gro hover:bg-[#F06292] border-[#F06292] border text-[#F06292] capitalize bg-transparent hover:text-white">Join Us</Button>
+            </div>
+          }
+          
         </div>
 
         <Login/>

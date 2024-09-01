@@ -1,3 +1,4 @@
+
 const SingleCard = ({ card }) => {
   const { name, image, icon, price } = card;
   return (

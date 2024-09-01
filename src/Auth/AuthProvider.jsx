@@ -51,7 +51,7 @@ const AuthProvider = ({children}) => {
             setUser(currentUser) ;
         })
         return unSubscribe ;
-    } , [axiosSecure , deviceInfo])
+    } , [])
 
     const authInfo = {
         user ,

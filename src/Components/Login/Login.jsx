@@ -5,14 +5,82 @@ import { FcGoogle } from "react-icons/fc";
 import facebook from "../../../public/Icons/facebook.png";
 import { IoMdEye, IoMdEyeOff } from "react-icons/io";
 import { useState } from "react";
+import useAuth from "../../Hook/useAuth";
+import { toast, ToastContainer } from "react-toastify";
 
 const Login = () => {
 
+    const {signIn , googleLogin} = useAuth() ;
     const [eye , setEye] = useState(false) ;
+    const [remember , setRemember] = useState(false) ;
+    const [errorText , setErrorText] = useState('') ;
 
     const handleModal = () => {
         document.getElementById('my_modal_3').close() ;
         document.getElementById('my_modal_4').showModal() ;
+    }
+
+    const handleSubmit = async (e) => {
+        e.preventDefault() ;
+    
+        const form = e.target ;
+        const email = form.email.value ;
+        const pass = form.password.value ;
+    
+        if(remember){
+          signIn(email , pass) 
+          .then((result) => {
+            console.log(result);
+            form.reset() ;
+            toast.success('Login Success Fully !') ;
+  
+            setTimeout(() => {
+              if(location.state){
+                document.getElementById('my_modal_3').close() ;
+                navigate(location.state) ;
+              }
+              else{
+                document.getElementById('my_modal_3').close() ;
+                navigate('/') ;
+              }
+            }, 1000);
+  
+          })
+          .catch((error) => {
+            console.log(error.message);
+            if(error.message.includes('Firebase: Error (auth/invalid-credential).')){
+              toast.error("Password Isn't Match") ;
+            }
+            else if(error.message.includes("Firebase: Access to this account has been temporarily disabled due to many failed login attempts. You can immediately restore it by resetting your password or you can try again later. (auth/too-many-requests).")){
+              toast.error("This account has been temporarily disabled !") ;
+            }
+          })
+        }
+        else{
+          setErrorText('Please Accept Our Turms & Condition !') ;
+        }
+    }
+
+    const handleGoogleLogin = () => {
+        googleLogin()
+        .then( async (result) => {
+          console.log(result);  
+          toast.success('Login Success Fully !') ;
+  
+          setTimeout(() => {
+            if(location.state){
+                document.getElementById('my_modal_3').close() ;
+                navigate(location.state) ;
+            }
+            else{
+                document.getElementById('my_modal_3').close() ;
+                navigate('/') ;
+            }
+          }, 1000);
+        })
+        .catch((error) => {
+          console.log(error);
+        })
     }
 
     return (
@@ -28,7 +96,7 @@ const Login = () => {
                     <p className="gro text-lg font-medium text-center w-[300px] ">Great to have you back ! <span onClick={handleModal} className="text-[#FF689A] cursor-pointer">Sign Up</span> </p>
                     </div>
 
-                    <form className="w-full mt-10 flex flex-col gap-5">
+                    <form onSubmit={handleSubmit} className="w-full mt-10 flex flex-col gap-5">
 
                         <Input name="email" label="Email Address" required/>
                         <div className="relative">
@@ -58,6 +126,13 @@ const Login = () => {
                             label="Turms & Condition"
                             />
                         </div>
+                        <div>
+                            {remember ? (
+                                <p></p>
+                            ) : (
+                                <p className="text-red-800 font-semibold">{errorText}</p>
+                            )}
+                        </div>
                         <input type="submit" value={"Sign Up"} className="btn bg-[#FF689A] text-white hover:bg-transparent border border-[#FF689A] hover:text-[#FF689A] hover:border-[#FF689A] gro"/>
 
                     </form>
@@ -65,7 +140,7 @@ const Login = () => {
                     <div className="divider text-base gro mt-7">Or Sign In With</div>
 
                     <div className="flex items-center justify-between gap-3 mt-6">
-                        <Button className="w-full gro capitalize text-base bg-[#FAFAFA] border text-black shadow-none flex gap-3 items-center justify-center"><FcGoogle className="text-xl"/> Google</Button>
+                        <Button onClick={handleGoogleLogin} className="w-full gro capitalize text-base bg-[#FAFAFA] border text-black shadow-none flex gap-3 items-center justify-center"><FcGoogle className="text-xl"/> Google</Button>
                         <Button className="w-full gro capitalize text-base bg-[#FAFAFA] border text-black shadow-none flex gap-3 items-center justify-center"><img src={facebook} className="w-[22px] h-[20px]"/> FaceBook</Button>
                     </div>
 
@@ -77,6 +152,18 @@ const Login = () => {
                     </form>
                 </div>
             </dialog>
+            <ToastContainer
+                position="top-right"
+                autoClose={1000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"
+            />
         </div>
     );
 };

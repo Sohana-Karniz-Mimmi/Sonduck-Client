@@ -3,13 +3,14 @@ import SingleCard from "./SingleCard";
 import Container from "../../Shared/Container";
 
 const SinglePack = () => {
+
   const [cards, setCards] = useState([]);
   useEffect(() => {
     fetch("./public/product.json")
       .then((res) => res.json())
       .then((data) => setCards(data));
-    console.log(cards);
   }, []);
+  
   return (
     <section>
       <div className="mt-12">
