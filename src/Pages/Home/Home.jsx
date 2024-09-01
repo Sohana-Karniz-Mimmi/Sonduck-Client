@@ -1,9 +1,7 @@
-import AccessPassSec from "../../Components/SubscriptionPageComponents/AccessPassSec";
 import Discover from "../../Components/SubscriptionPageComponents/Discover";
-import Features from "../../Components/SubscriptionPageComponents/Features";
-import SinglePackSlider from "../../Components/SubscriptionPageComponents/SinglePackSlider";
 import FuturePack from "../Store/FuturePack";
 import GetBundles from "../Store/GetBundles";
+import AllAccessPass from "./AllAccessPass";
 import Banner from "./Banners/Banner";
 import FeaturedSinglePacks from "./FeaturedSinglePacks";
 import MotionDuck from "./MotionDuck";
@@ -33,7 +31,7 @@ const Home = () => {
         <GetBundles />
       </div>
       <div className="mt-12">
-        <AccessPassSec />
+        <AllAccessPass />
       </div>
       <div>
         <UnlockSonDuck />

@@ -21,10 +21,10 @@ const GetBundles = () => {
             <div className="bg-blue-500 p-4 md:p-6 lg:p-8 rounded-xl text-white">
               <div className="flex flex-col md:flex-row items-center justify-between my-2">
                 <div className="flex mb-4 md:mb-0">
-                  <h2 className="text-xl md:text-2xl lg:text-3xl rounded-full border-white bg-sky-900 font-bold p-2 mr-2">
+                  <h2 className="py-2 px-4 border-2 bg-purple-800 border-purple-400 rounded-full font-bold text-3xl mr-2">
                     Ae
                   </h2>
-                  <h2 className="text-xl md:text-2xl lg:text-3xl rounded-full border-white bg-sky-900 font-bold p-2">
+                  <h2 className="py-2 px-4 border-2 bg-purple-800 border-purple-400 rounded-full font-bold text-3xl">
                     Pr
                   </h2>
                 </div>
@@ -76,10 +76,10 @@ const GetBundles = () => {
             <div className="bg-red-500 p-4 md:p-6 lg:p-8 rounded-xl text-white">
               <div className="flex flex-col md:flex-row items-center justify-between my-2">
                 <div className="flex mb-4 md:mb-0">
-                  <h2 className="text-xl md:text-2xl lg:text-3xl rounded-full border-white bg-sky-900 font-bold p-2 mr-2">
+                  <h2 className="py-2 px-4 border-2 bg-purple-800 border-purple-400 rounded-full font-bold text-3xl mr-2">
                     Ae
                   </h2>
-                  <h2 className="text-xl md:text-2xl lg:text-3xl rounded-full border-white bg-sky-900 font-bold p-2">
+                  <h2 className="py-2 px-4 border-2 bg-purple-800 border-purple-400 rounded-full font-bold text-3xl mr-2">
                     Pr
                   </h2>
                 </div>
@@ -131,10 +131,10 @@ const GetBundles = () => {
             <div className="bg-green-500 p-4 md:p-6 lg:p-8 rounded-xl text-white">
               <div className="flex flex-col md:flex-row items-center justify-between my-2">
                 <div className="flex mb-4 md:mb-0">
-                  <h2 className="text-xl md:text-2xl lg:text-3xl rounded-full border-white bg-sky-900 font-bold p-2 mr-2">
+                  <h2 className="py-2 px-4 border-2 bg-purple-800 border-purple-400 rounded-full font-bold text-3xl mr-2">
                     Ae
                   </h2>
-                  <h2 className="text-xl md:text-2xl lg:text-3xl rounded-full border-white bg-sky-900 font-bold p-2">
+                  <h2 className="py-2 px-4 border-2 bg-purple-800 border-purple-400 rounded-full font-bold text-3xl mr-2">
                     Pr
                   </h2>
                 </div>
