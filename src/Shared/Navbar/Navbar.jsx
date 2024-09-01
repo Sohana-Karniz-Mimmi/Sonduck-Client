@@ -1,11 +1,11 @@
 
-import { Typography } from "@material-tailwind/react";
+import { Button, Typography } from "@material-tailwind/react";
 import { NavLink } from "react-router-dom";
 import duckImg from "../../../public/NavImages/pinkDuck.png";
 
 const Navbar = () => {
   const navLinks = (
-    <>
+    <ul className="flex items-center gap-3">
       <Typography className="p-1 font-normal gro">
           <NavLink
             to={"/"}
@@ -17,7 +17,7 @@ const Navbar = () => {
                 : "hover:bg-transparent"
             }
           >
-            HOME
+            Home
           </NavLink>
       </Typography>
 
@@ -32,7 +32,7 @@ const Navbar = () => {
                 : "hover:bg-transparent"
             }
           >
-            STORE
+            Store
           </NavLink>
       </Typography>
 
@@ -47,7 +47,7 @@ const Navbar = () => {
                 : "hover:bg-transparent"
             }
           >
-            TUTORIALS
+            Tutorials
           </NavLink>
       </Typography>
 
@@ -62,7 +62,7 @@ const Navbar = () => {
                 : "hover:bg-transparent"
             }
           >
-            FAQs
+            Faqs
           </NavLink>
       </Typography>
 
@@ -80,11 +80,12 @@ const Navbar = () => {
             SUBSCRIPTION
           </NavLink>
       </Typography> */}
-    </>
+    </ul>
   );
   return (
     <div>
       <div className="navbar bg-black">
+
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -114,13 +115,16 @@ const Navbar = () => {
             <img className="" src={duckImg} alt="" />
           </a>
         </div>
+
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 ">{navLinks}</ul>
         </div>
+
         <div className="navbar-end flex items-center gap-3">
-          <a className="btn btn-outline gro text-white hover:border-white hover:bg-transparent">Log In</a>
-          <a className="btn gro">JOIN US</a>
+          <Button className="bg-transparent hover:bg-transparent py-[11px] hover:text-[#F06292] capitalize border-[#F06292] hover:border text-white">Log In</Button>
+          <Button className="gro hover:bg-[#F06292] border-[#F06292] border text-[#F06292] capitalize bg-transparent hover:text-white">Join Us</Button>
         </div>
+
       </div>
     </div>
   );
