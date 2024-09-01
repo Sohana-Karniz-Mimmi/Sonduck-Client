@@ -1,6 +1,6 @@
+
 import Img1 from "../../../public/Subs-images/manImg1.png";
 import Img2 from "../../../public/Subs-images/manImg2.png";
-import Img3 from "../../../public/Subs-images/Ellipse (1).png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -11,7 +11,7 @@ const Discover = () => {
   return (
     <div className="py-10 px-4 md:px-16 lg:px-32 bg-[#dddddd] flex flex-col items-center gap-10">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-11 w-full">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl text-black font-semibold">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl gro text-black font-semibold w-[577px]">
           Discover What Our Community Is Saying
         </h1>
         <p className="text-base md:text-lg lg:text-xl text-black">
@@ -54,7 +54,7 @@ const Discover = () => {
         >
           <SwiperSlide>
             <TestimonialCard
-              imgSrc={Img3}
+              imgSrc={Img1}
               name="Sarah M."
               role="Enthusiastic Learner"
               testimonial="Sonduck has transformed my approach to learning. The diverse range of courses and the quality of content provided by creators have exceeded my expectations. The platform truly fosters a sense of community and lifelong learning."
