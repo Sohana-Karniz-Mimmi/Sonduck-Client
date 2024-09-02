@@ -1,4 +1,4 @@
-import SidebarCetegory from "./SidebarCetegory";
+import SidebarCetegory from "./SitebarCetegory";
 
 const Sidebar = () => {
   return (

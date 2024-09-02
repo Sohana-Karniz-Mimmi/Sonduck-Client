@@ -1,5 +1,12 @@
-
-import { Avatar, Button, Menu, MenuHandler, MenuItem, MenuList, Typography } from "@material-tailwind/react";
+import {
+  Avatar,
+  Button,
+  Menu,
+  MenuHandler,
+  MenuItem,
+  MenuList,
+  Typography,
+} from "@material-tailwind/react";
 import { NavLink } from "react-router-dom";
 import duckImg from "../../../public/NavImages/pinkDuck.png";
 import SignUp from "../../Components/SignUp/SignUp";
@@ -7,69 +14,68 @@ import Login from "../../Components/Login/Login";
 import useAuth from "../../Hook/useAuth";
 
 const Navbar = () => {
-
-  const {user , logOut} = useAuth() ;
+  const { user, logOut } = useAuth();
 
   const navLinks = (
     <ul className="flex items-center gap-3">
       <Typography className="p-1 font-normal gro">
-          <NavLink
-            to={"/"}
-            className={({ isActive, isPending }) =>
-              isPending
-                ? "pending"
-                : isActive
-                ? "font-semibold underline transition-all ease-in-out duration-300 text-[#F06292]"
-                : "hover:bg-transparent"
-            }
-          >
-            Home
-          </NavLink>
+        <NavLink
+          to={"/"}
+          className={({ isActive, isPending }) =>
+            isPending
+              ? "pending"
+              : isActive
+              ? "font-semibold underline transition-all ease-in-out duration-300 text-[#F06292]"
+              : "hover:bg-transparent"
+          }
+        >
+          Home
+        </NavLink>
       </Typography>
 
       <Typography className="p-1 font-normal gro">
-          <NavLink
-            to={"/store"}
-            className={({ isActive, isPending }) =>
-              isPending
-                ? "pending"
-                : isActive
-                ? "font-semibold underline transition-all ease-in-out duration-300 text-[#F06292]"
-                : "hover:bg-transparent"
-            }
-          >
-            Store
-          </NavLink>
+        <NavLink
+          to={"/store"}
+          className={({ isActive, isPending }) =>
+            isPending
+              ? "pending"
+              : isActive
+              ? "font-semibold underline transition-all ease-in-out duration-300 text-[#F06292]"
+              : "hover:bg-transparent"
+          }
+        >
+          Store
+        </NavLink>
       </Typography>
 
       <Typography className="p-1 font-normal gro">
-          <NavLink
-            to={"/blogs"}
-            className={({ isActive, isPending }) =>
-              isPending
-                ? "pending"
-                : isActive
-                ? "font-semibold underline transition-all ease-in-out duration-300 text-[#F06292]"
-                : "hover:bg-transparent"
-            }
-          >
-            Tutorials
-          </NavLink>
+        <NavLink
+          to={"/blogs"}
+          className={({ isActive, isPending }) =>
+            isPending
+              ? "pending"
+              : isActive
+              ? "font-semibold underline transition-all ease-in-out duration-300 text-[#F06292]"
+              : "hover:bg-transparent"
+          }
+        >
+          Tutorials
+        </NavLink>
       </Typography>
 
       <Typography className="p-1 font-normal gro">
-          <NavLink
-            to={"/faqs"}
-            className={({ isActive, isPending }) =>
-              isPending
-                ? "pending"
-                : isActive
-                ? "font-semibold underline transition-all ease-in-out duration-300 text-[#F06292]"
-                : "hover:bg-transparent"
-            }
-          >
-            Faqs
-          </NavLink>
+        <NavLink
+          to={"/faqs"}
+          className={({ isActive, isPending }) =>
+            isPending
+              ? "pending"
+              : isActive
+              ? "font-semibold underline transition-all ease-in-out duration-300 text-[#F06292]"
+              : "hover:bg-transparent"
+          }
+        >
+          Faqs
+        </NavLink>
       </Typography>
 
       {/* <Typography className="p-1 font-normal gro">
@@ -88,11 +94,10 @@ const Navbar = () => {
       </Typography> */}
     </ul>
   );
-  
+
   return (
     <div>
       <div className="navbar bg-black">
-
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -128,36 +133,52 @@ const Navbar = () => {
         </div>
 
         <div className="navbar-end flex items-center gap-3">
-
-          {
-            user?.email ? 
+          {user?.email ? (
             <div className="">
               <Menu>
-
                 <MenuHandler>
-                  <Avatar className="cursor-pointer border" src={user?.photoURL} />
+                  <Avatar
+                    className="cursor-pointer border"
+                    src={user?.photoURL}
+                  />
                 </MenuHandler>
 
                 <MenuList>
-                  <MenuItem onClick={() => logOut()} className="flex items-center gap-2 ">
+                  <MenuItem
+                    onClick={() => logOut()}
+                    className="flex items-center gap-2 "
+                  >
                     <Typography variant="small" className="font-medium">
                       Sign Out
                     </Typography>
                   </MenuItem>
                 </MenuList>
               </Menu>
-            </div>:
-            <div className="flex items-center gap-3">
-              <Button onClick={()=>document.getElementById('my_modal_3').showModal()} className="bg-transparent hover:bg-transparent py-[11px] hover:text-[#F06292] capitalize border-[#F06292] hover:border text-white">Log In</Button>
-              <Button onClick={()=>document.getElementById('my_modal_4').showModal()} className="gro hover:bg-[#F06292] border-[#F06292] border text-[#F06292] capitalize bg-transparent hover:text-white">Join Us</Button>
             </div>
-          }
-          
+          ) : (
+            <div className="flex items-center gap-3">
+              <Button
+                onClick={() =>
+                  document.getElementById("my_modal_3").showModal()
+                }
+                className="bg-transparent hover:bg-transparent py-[11px] hover:text-[#F06292] capitalize border-[#F06292] hover:border text-white"
+              >
+                Log In
+              </Button>
+              <Button
+                onClick={() =>
+                  document.getElementById("my_modal_4").showModal()
+                }
+                className="gro hover:bg-[#F06292] border-[#F06292] border text-[#F06292] capitalize bg-transparent hover:text-white"
+              >
+                Join Us
+              </Button>
+            </div>
+          )}
         </div>
 
-        <Login/>
-        <SignUp/>
-
+        <Login />
+        <SignUp />
       </div>
     </div>
   );

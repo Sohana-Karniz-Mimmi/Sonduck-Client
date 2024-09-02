@@ -1,6 +1,6 @@
 import { IoSearchOutline } from "react-icons/io5";
 import RecentPost from "./RecentPost";
-import Cetegories from "./Cetegories";
+import Cetegories from "./Categories";
 
 const SidebarCetegory = () => {
   return (
@@ -15,10 +15,10 @@ const SidebarCetegory = () => {
           className="bg-transparent border-none placeholder:text-gray-400 outline-none text-gray-600 w-full"
         />
       </div>
-        <div className="hidden lg:block">
+      <div className="hidden lg:block">
         <RecentPost />
-        </div>
-        <Cetegories/>
+      </div>
+      <Cetegories />
     </div>
   );
 };

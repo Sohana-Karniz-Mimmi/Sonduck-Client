@@ -4,7 +4,7 @@ import Pagination from "./Pagination";
 import useBlog from "../../Hook/useBlog";
 
 const ArticleList = () => {
-  const blogData = useBlog()
+  const blogData = useBlog();
   return (
     <div className="mt-16 flex-[3]">
       {blogData?.map((article, idx) => (
@@ -19,7 +19,7 @@ const ArticleList = () => {
         ></ArticleCard>
       ))}
       {/* TODO: give them original pagination data */}
-      
+
       <Pagination></Pagination>
     </div>
   );
