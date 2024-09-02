@@ -1,5 +1,5 @@
 import banner from "../../assets/images/banner/hero_bg.png";
-import bannerImg from "../../assets/images/banner/hero_bg.png";
+import bannerImg from "../../assets/images/Subscriptions/Img.png";
 const HeroSection = () => {
   return (
     <>
@@ -10,15 +10,19 @@ const HeroSection = () => {
         <div className="max-w-[1200px] w-full mx-auto">
           {/* this div is for banner */}
 
-          <div className="pt-32 pb-64">
-            <h2 className="title text-center text-4xl lg:text-[64px] font-semibold mb-24 p-2 tracking-widest">
+          <div className="pt-10 pb-80">
+            <h2 className="title text-center text-white text-4xl lg:text-[64px] font-semibold mb-16 p-2 tracking-widest">
               Subscription
             </h2>
-            <img src={bannerImg} alt="Subsctiption Image" />
+            <img
+              className="px-20 w-full h-56  justify-center items-center"
+              src={bannerImg}
+              alt="Subsctiption Image"
+            />
           </div>
         </div>
       </header>
-      <div className="px-5">
+      <div className="px-5 pt-20">
         <div className="max-w-[1200px]  w-full mx-auto flex flex-col md:flex-row justify-between items-center gap-5 p-5 lg:p-10 border shadow-slate-400 bg-white shadow-lg rounded-2xl md:-mt-60 mb-24">
           <div className="w-full">
             <h4 className="text-xl font-semibold text-gray-900 text-center mb-5 tracking-wide">
