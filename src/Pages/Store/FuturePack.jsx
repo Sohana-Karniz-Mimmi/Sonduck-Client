@@ -1,3 +1,4 @@
+import img from "../../assets/images/Store/Img.png";
 const FuturePack = () => {
   return (
     <div className="px-4 md:px-8 lg:px-16">
@@ -24,7 +25,7 @@ const FuturePack = () => {
           </div>
           <div className="w-full md:w-1/2 lg:w-1/3">
             <img
-              src="/src/assets/images/store/Img.png"
+              src={img}
               alt="Motionduck All Access"
               className="w-full h-auto object-cover rounded-xl"
             />
