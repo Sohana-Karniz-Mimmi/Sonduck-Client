@@ -17,7 +17,7 @@ const UnlockSonDuck = () => {
           your finest course on the Sonduck Course Library.
         </p>
         <div className="text-center my-8">
-          <button className="py-2 px-4 rounded-xl text-white bg-pink-600">
+          <button className="py-2 px-4 rounded-xl text-white bg-pink-600 hover:bg-pink-300 hover:border-pink-200 border hover:mt-2 hover:scale-95">
             Browse All
           </button>
         </div>
