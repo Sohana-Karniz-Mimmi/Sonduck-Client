@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+import Features from "../Components/ProductDetails/Features";
+// import NavCard from "../Components/ProductDetails/NavCart";
+import RelatedProducts from "../Components/ProductDetails/RelatedProducts";
+import VideoAndFeatures from "../Components/ProductDetails/VideoAndFeatures";
+>>>>>>> 259b88eadead47533c19391812a07e3cda588e6b
 import YoutubeVideo from "../Components/ProductDetails/YoutubeVideo";
 import Container from "../Shared/Container";
 
@@ -14,6 +21,7 @@ const ProductDetails = () => {
                     <YoutubeVideo></YoutubeVideo>
                 </div>
             </Container>
+            {/* <NavCard/> */}
         </div>
     );
 };
